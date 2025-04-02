@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #00f5ff;
+  --accent-orange: #ff8c00;
+  --background: #0d0d0d;
+  --foreground: #ffffff;
+}
+
+[data-theme="orange"] {
+  --accent: #ff8c00;
+}
+
+html[data-theme="orange"] {
+  --accent: #ff8c00;
+}
+
+@layer base {
+  body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: var(--font-orbitron), system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glow {
+    box-shadow: 0 0 10px 2px var(--accent);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .glow:hover {
+    box-shadow: 0 0 20px 5px var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 8px var(--accent);
+  }
+
+  .border-glow {
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 10px 0 var(--accent);
+  }
+
+  .nav-link {
+    position: relative;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    background-color: var(--accent);
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px 1px var(--accent);
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .timeline-line {
+    position: absolute;
+    left: 1.25rem;
+    top: 0;
+    height: 100%;
+    width: 0.125rem;
+    background-color: var(--accent);
+    box-shadow: 0 0 8px 1px var(--accent);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 1.25rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 9999px;
+    background-color: var(--accent);
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px 1px var(--accent);
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: inline-block;
+    text-shadow: 0 0 10px var(--accent);
+    border-bottom: 2px solid var(--accent);
+    box-shadow: 0 4px 6px -6px var(--accent);
+  }
+
+  .card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--accent);
+    transition-property: all;
+    transition-duration: 300ms;
+    box-shadow: 0 0 10px 0px var(--accent);
+  }
+
+  .card:hover {
+    box-shadow: 0 0 20px 2px var(--accent);
+    transform: translateY(-5px);
+  }
+
+  .btn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: black;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    transition-property: all;
+    transition-duration: 300ms;
+    box-shadow: 0 0 10px 0px var(--accent);
+  }
+
+  .btn:hover {
+    background-color: var(--accent);
+    color: black;
+    box-shadow: 0 0 15px 2px var(--accent);
+  }
+
+  .skill-tag {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--accent);
+    margin: 0.25rem;
+    display: inline-block;
+    box-shadow: 0 0 5px 0px var(--accent);
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--accent);
+    color: white;
+    box-shadow: 0 0 5px 0px var(--accent);
+  }
+
+  .form-input:focus {
+    outline: none;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--accent);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+}
+
