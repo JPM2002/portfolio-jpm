@@ -13,10 +13,10 @@ const About = () => {
           <div className="card flex justify-center">
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-[var(--accent)] glow">
               <img
-                src="/placeholder.svg?height=256&width=256"
-                alt="Javier Pozo Miranda"
-                className="w-full h-full object-cover"
-              />
+                  src="/assets/Profile.jpg"
+                  alt="Javier Pozo Miranda"
+                  className="w-full h-full object-cover"
+                />
             </div>
           </div>
 

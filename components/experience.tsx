@@ -18,6 +18,14 @@ const experiences = [
     icon: <CodeIcon className="h-6 w-6" />,
   },
   {
+    title: "Tech Team Member",
+    company: "Nittany AI Student Society",
+    period: "Feb 2024 - Present",
+    description:
+      "Contributed to the open-source Nittany AI Student Society repository focused on collaborative AI development. Helped document tools, share project templates, and encourage learning among members. GitHub: https://github.com/JPM2002/Tech-Team---Nittany-Ai",
+    icon: <CodeIcon className="h-6 w-6" />,
+  },
+  {
     title: "Proctor",
     company: "Math Department",
     period: "Sep 2022 - Dec 2022",
@@ -70,4 +78,3 @@ const Experience = () => {
 }
 
 export default Experience
-

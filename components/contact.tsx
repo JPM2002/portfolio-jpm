@@ -43,31 +43,31 @@ const Contact = () => {
 
             <div className="flex flex-col space-y-4">
               <a
-                href="mailto:contact@example.com"
+                href="jdp5958@psu.edu"
                 className="flex items-center text-[var(--accent)] hover:text-white transition-colors"
               >
                 <MailIcon className="h-5 w-5 mr-3" />
-                <span>contact@example.com</span>
+                <span>jdp5958@psu.edu</span>
               </a>
 
               <a
-                href="https://github.com"
+                href="https://github.com/JPM2002"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-[var(--accent)] hover:text-white transition-colors"
               >
                 <GithubIcon className="h-5 w-5 mr-3" />
-                <span>github.com/javierpozo</span>
+                <span>Github</span>
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/javier-pozo-miranda/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-[var(--accent)] hover:text-white transition-colors"
               >
                 <LinkedinIcon className="h-5 w-5 mr-3" />
-                <span>linkedin.com/in/javierpozo</span>
+                <span>linkedin</span>
               </a>
             </div>
           </div>
