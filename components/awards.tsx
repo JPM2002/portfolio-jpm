@@ -1,12 +1,19 @@
-import { TrophyIcon, MicIcon, BookIcon } from "lucide-react"
+import { TrophyIcon, MicIcon, BookIcon, StarIcon } from "lucide-react"
 
 const awards = [
   {
-    title: "Keynote Speaker",
-    event: "TGIF 2024",
+    title: "AI Excellence Award",
+    event: "Dambrot Family Award 2025",
     description:
-      "Delivered keynote address on 'The Future of AI in Healthcare' at the Technology and Growth Innovation Forum.",
-    icon: <MicIcon className="h-6 w-6" />,
+      "Recognized by Penn State’s Nittany AI Alliance and College of IST for outstanding innovation and leadership in AI applications.",
+    icon: <StarIcon className="h-6 w-6" />,
+  },
+  {
+    title: "UN Geneva Publication",
+    event: "Research Paper",
+    description:
+      "Published research on AI ethics and governance frameworks in collaboration with the United Nations Geneva office.",
+    icon: <BookIcon className="h-6 w-6" />,
   },
   {
     title: "Hackathon Winner",
@@ -15,12 +22,13 @@ const awards = [
       "First place at HenHacks for developing an encrypted communication platform with privacy-focused features.",
     icon: <TrophyIcon className="h-6 w-6" />,
   },
+
   {
-    title: "UN Geneva Publication",
-    event: "Research Paper",
+    title: "Keynote Speaker",
+    event: "TGIF 2024",
     description:
-      "Published research on AI ethics and governance frameworks in collaboration with the United Nations Geneva office.",
-    icon: <BookIcon className="h-6 w-6" />,
+      "Delivered keynote address on 'The Future of AI in Healthcare' at the Technology and Growth Innovation Forum.",
+    icon: <MicIcon className="h-6 w-6" />,
   },
 ]
 
@@ -30,16 +38,22 @@ const Awards = () => {
       <div className="container mx-auto px-4">
         <h2 className="section-title">Awards & Speaking</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {awards.map((award, index) => (
-            <div key={index} className="card fade-in" style={{ animationDelay: `${0.1 * index}s` }}>
+            <div
+              key={index}
+              className="card fade-in"
+              style={{ animationDelay: `${0.1 * index}s` }}
+            >
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 rounded-full bg-black border border-[var(--accent)] flex items-center justify-center glow">
                   {award.icon}
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-center text-[var(--accent)] mb-2">{award.title}</h3>
+              <h3 className="text-xl font-bold text-center text-[var(--accent)] mb-2">
+                {award.title}
+              </h3>
               <h4 className="text-lg text-center mb-4">{award.event}</h4>
               <p className="text-center">{award.description}</p>
             </div>
@@ -56,4 +70,3 @@ const Awards = () => {
 }
 
 export default Awards
-

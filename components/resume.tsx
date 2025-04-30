@@ -49,10 +49,14 @@ const Resume = () => {
         </div>
 
         <div className="flex justify-center fade-in delay-300">
-          <Button className="btn flex items-center">
+          <a
+            href="/CV-Javier-Pozo-Miranda.pdf"
+            download
+            className="btn flex items-center px-4 py-2 bg-[var(--accent)] text-white rounded-md hover:opacity-90 transition-all"
+          >
             <DownloadIcon className="mr-2 h-5 w-5" />
             Download Resume
-          </Button>
+          </a>
         </div>
       </div>
 

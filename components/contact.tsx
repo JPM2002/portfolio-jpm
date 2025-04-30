@@ -25,7 +25,7 @@ const Contact = () => {
     // Reset form
     setFormData({ name: "", email: "", message: "" })
     // Show success message (in a real app)
-    alert("Message sent! (This is a demo)")
+    alert("Message sent!")
   }
 
   return (

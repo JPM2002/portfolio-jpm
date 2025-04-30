@@ -8,7 +8,7 @@ const Hero = () => {
   const typewriterRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    const phrases = ["AI Engineer", "ML Developer", "Systems Thinker"]
+    const phrases = ["AI Engineer ", "ML Developer ", "Systems Thinker "]
     let i = 0,
       j = 0
     let currentPhrase: string[] = []

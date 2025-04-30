@@ -13,7 +13,6 @@ const projects = [
     description: "AI-powered journaling application that provides insights and sentiment analysis on your entries.",
     tags: ["Python", "NLP", "React", "MongoDB"],
     github: "https://github.com/JPM2002/Journal-Ai",
-    demo: "https://github.com/JPM2002/Journal-Ai",
   },
   {
     title: "Manim Visualizer",
